@@ -4,7 +4,7 @@ from litres_project.data.data import book
 
 
 @allure.epic('Move book to/from favorites')
-@allure.label("owner", "shakeawwake")
+@allure.label("owner", "Devianochka")
 @allure.feature("Checking whether a book has been added or removed from favorites")
 @allure.label('microservice', 'WEB')
 @allure.tag('regress', 'ui', 'normal')
@@ -22,7 +22,7 @@ def test_adding_book_to_favorites():
 
 
 @allure.epic('Move book to/from favorites')
-@allure.label("owner", "shakeawwake")
+@allure.label("owner", "Devianochka")
 @allure.feature("Checking whether a book has been added or removed from favorites")
 @allure.label('microservice', 'WEB')
 @allure.tag('regress', 'ui', 'normal')

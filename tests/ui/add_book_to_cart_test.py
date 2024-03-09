@@ -4,7 +4,7 @@ from litres_project.data.data import book, book2
 
 
 @allure.epic('Add book to cart')
-@allure.label("owner", "shakeawwake")
+@allure.label("owner", "Devianochka")
 @allure.feature("Checking whether a book has been added to cart")
 @allure.label('microservice', 'WEB')
 @allure.tag('regress', 'ui', 'normal')
@@ -22,7 +22,7 @@ def test_adding_book_to_cart():
 
 
 @allure.epic('Add book to cart')
-@allure.label("owner", "shakeawwake")
+@allure.label("owner", "Devianochka")
 @allure.feature("Checking whether a books has been added to cart")
 @allure.label('microservice', 'WEB')
 @allure.tag('regress', 'ui', 'normal')

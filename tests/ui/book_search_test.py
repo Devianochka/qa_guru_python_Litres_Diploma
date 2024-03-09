@@ -4,7 +4,7 @@ from litres_project.data.data import book
 
 
 @allure.epic('Search')
-@allure.label("owner", "shakeawwake")
+@allure.label("owner", "Devianochka")
 @allure.feature("Checking the book search on the main page")
 @allure.label('microservice', 'WEB')
 @allure.tag('regress', 'ui', 'normal')
@@ -22,7 +22,7 @@ def test_searching_of_book_by_title():
 
 
 @allure.epic('Search')
-@allure.label("owner", "shakeawwake")
+@allure.label("owner", "Devianochka")
 @allure.feature("Checking the book search on the main page")
 @allure.label('microservice', 'WEB')
 @allure.tag('regress', 'ui', 'normal')

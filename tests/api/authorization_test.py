@@ -23,7 +23,7 @@ def test_authorization_registered_user():
 
 
 @allure.epic('API. Authorized')
-@allure.label("owner", "shakeawwake")
+@allure.label("owner", "Devianochka")
 @allure.feature("Checking the authorization of the user")
 @allure.label('microservice', 'API')
 @allure.tag('regress', 'api', 'normal')

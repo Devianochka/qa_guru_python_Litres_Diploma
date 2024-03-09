@@ -5,7 +5,7 @@ from litres_project.pages.ui.main_page import main_page
 
 
 @allure.epic('Authorized')
-@allure.label("owner", "shakeawwake")
+@allure.label("owner", "Devianochka")
 @allure.feature("Checking the authorization of the user")
 @allure.label('microservice', 'WEB')
 @allure.tag('regress', 'ui', 'normal')
@@ -29,7 +29,7 @@ def test_authorization_registered_user():
 
 
 @allure.epic('Authorized')
-@allure.label("owner", "shakeawwake")
+@allure.label("owner", "Devianochka")
 @allure.feature("Checking the authorization of the user")
 @allure.label('microservice', 'WEB')
 @allure.tag('regress', 'ui', 'normal')

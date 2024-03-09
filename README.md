@@ -1,79 +1,124 @@
-<h1> Проект по тестированию интернет-сайта о литературе LiveLib.ru</h1>
+<h1> Проект по тестированию сервиса электронных и аудиокниг "Литрес"</h1>
 
-<a target="_blank" href="https://www.livelib.ru">Ссылка на сайт</a>
+> <a target="_blank" href="https://www.litres.ru">Ссылка на сайт</a>
 
-### API-тесты
-- [x] Авторизация пользователя на сайте
-- [x] Изменение статуса книги
-- [x] Голосование за рецензию\комментарий
+![This is an image](design/image/main_page_litres.png)
+
+<h3> Список проверок, реализованных в автотестах:</h3>
 
 ### UI-тесты
-- [x] Авторизация пользователя на сайте
-- [x] Отправка сообщения авторизованным пользователем
-- [x] Поиск книги неавторизованным пользователем
-- [x] Изменения данных в разделе книжного вызова
 
+- [x] Авторизация пользователя на сайте(успешная и неуспешная)
+- [x] Поиск книги
+- [x] Добавление книги в корзину
+- [x] Удаление книги из корзины
+- [x] Добавление книги в Избранное
+- [x] Удаление книги из Избранного
 
-### Проект реализован с использованием:
+### API-тесты
 
-<img src="resources/icons/python-original.svg" width="50"> <img src="resources/icons/pytest.png" width="50"> <img src="resources/icons/intellij_pycharm.png" width="50"> <img src="resources/icons/selene.png" width="50"> <img src="resources/icons/selenoid.png" width="50"> <img src="resources/icons/jenkins.png" width="50"> <img src="resources/icons/allure_report.png" width="50"> <img src="resources/icons/allure_testops.png" width="50"> <img src="resources/icons/telegram.svg" width="50"> <img src="resources/icons/jira.png" width="50">
+- [x] Авторизация пользователя на сайте(успешная и неуспешная)
+- [x] Поиск книги(успешный и неуспешный)
+- [x] Добавление книги в корзину
+
+### Mobile-тесты
+
+- [x] Поиск книги(успешный и неуспешный)
+- [x] Добавление книги в Сохраненное
+- [x] Удаление книги из Сохраненного
 
 ----
 
-### Локальный запуск автотестов
+### Проект реализован с использованием:
+
+<img src="design/icons/python-original.svg" width="50"> <img src="design/icons/pytest.png" width="50"> <img src="design/icons/intellij_pycharm.png" width="50"> <img src="design/icons/selene.png" width="50"> <img src="design/icons/selenoid.png" width="50"> <img src="design/icons/jenkins.png" width="50"> <img src="design/icons/allure_report.png" width="50"> <img src="design/icons/allure_testops.png" width="50"> <img src="design/icons/tg.png" width="50"> <img src="design/icons/jira.png" width="50">
+
+----
+
+### Локальный запуск
+
 1. Клонируйте репозиторий на свой локальный компьютер при помощи git clone
 2. Создайте и активируйте виртуальное окружение
+
   ```bash
   python -m venv .venv
   source .venv/bin/activate
   ```
+
 3. Установите зависимости с помощью pip
+
   ```bash
   pip install -r requirements.txt
   ```
-4. Для запусков тестов локально используйте команд:
+
+4. Для запусков тестов локально используйте команды:
+
   ```bash
-  pytest -sv -m mobile tests/mobile/
-  pytest -sv -m web
-  pytest -sv -m api
+  pytest -sv  litres_project/tests/mobile
+  pytest -sv litres_project/tests/api
+  pytest -sv litres_project/tests/ui
   ```
 
 Получение отчёта allure:
+
 ```bash
 allure serve allure-results
 ```
 
 ----
 
-
 ### Удаленный запуск автотестов выполняется на сервере Jenkins
-> <a target="_blank" href="https://jenkins.autotests.cloud/job/livelib_project/">Ссылка на проект в Jenkins</a>
 
-
-#### Параметры сборки
-
-* `comment` - комментарий для оповещения в телеграмме
-
+> <a target="_blank" href="https://jenkins.autotests.cloud/job/diploma/">Ссылка на проект в Jenkins</a>
 
 #### Для запуска автотестов в Jenkins
 
-1. Открыть <a target="_blank" href="https://jenkins.autotests.cloud/job/livelib_project/">проект</a>
-2. Выбрать пункт `Build with Parameters`
-3. Указать комментарий 
-4. Нажать кнопку `Build`
-5. Результат запуска сборки можно посмотреть в отчёте Allure
-![This is an image](/resources/screenshots/allure_report.png)
+1. Открыть <a target="_blank" href="https://jenkins.autotests.cloud/job/diploma/">проект</a>
+2. Выбрать пункт `Build now`
+3. Результат запуска сборки можно посмотреть в отчёте Allure
+
 ----
+
+### Allure отчет
+
+#### Общие результаты
+
+![This is an image](design/image/allure_trend.png)
+
+#### Список тест кейсов
+
+![This is an image](design/image/list_of_cases.png)
+
+----
+
 ### Интеграция с Allure TestOps
 
-#### Информация о запуске сборки автотестов
-![This is an image](/resources/screenshots/allure_launch.png)
+> <a target="_blank" href="https://allure.autotests.cloud/project/4083/dashboards">Ссылка на проект в
+> AllureTestOps</a> (запрос доступа `admin@qa.guru`)
 
-#### Информация о тест-кейсах проекта
-![This is an image](/resources/screenshots/allure_test_cases.png)
+#### Cписок всех кейсов, имеющихся в проекте
 
-### Настроено автоматическое оповещение о результатах сборки Jenkins в Telegram-бот
-![This is an image](/resources/screenshots/telegram_message.png)
+![This is an image](design/image/tk.png)
+----
 
-### Пример видеозаписи прохождения  WEB-теста
-![This is a пша](/resources/screenshots/video_attach.gif)
+### Интеграция с Jira
+
+> <a target="_blank" href="https://jira.autotests.cloud/browse/HOMEWORK-1128">Ссылка на проект в Jira</a>
+
+![This is an image](design/image/jira_glazova.png)
+
+----
+
+### Оповещение о результатах прогона тестов в Telegram
+
+![This is an image](design/image/tg_glazova.png)
+
+----
+
+### Пример видео прохождения ui-автотеста
+
+![autotest_gif](design/image/allure_video.gif)
+
+### Пример видео прохождения mobile-автотеста
+
+![autotest_gif](design/image/mobile_at.gif)

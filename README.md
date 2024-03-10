@@ -2,8 +2,6 @@
 
 > <a target="_blank" href="https://www.litres.ru">Ссылка на сайт</a>
 
-![This is an image](design/image/main_page_litres.png)
-
 <h3> Список проверок, реализованных в автотестах:</h3>
 
 ### UI-тесты
@@ -69,7 +67,7 @@ allure serve allure-results
 
 ### Удаленный запуск автотестов выполняется на сервере Jenkins
 
-> <a target="_blank" href="https://jenkins.autotests.cloud/job/diploma/">Ссылка на проект в Jenkins</a>
+> <a target="_blank" href="https://jenkins.autotests.cloud/job/DS_24_Diploma/">Ссылка на проект в Jenkins</a>
 
 #### Для запуска автотестов в Jenkins
 
@@ -93,7 +91,7 @@ allure serve allure-results
 
 ### Интеграция с Allure TestOps
 
-> <a target="_blank" href="https://allure.autotests.cloud/project/4083/dashboards">Ссылка на проект в
+> <a target="_blank" href="https://allure.autotests.cloud/launch/36871">Ссылка на проект в
 > AllureTestOps</a> (запрос доступа `admin@qa.guru`)
 
 #### Cписок всех кейсов, имеющихся в проекте
@@ -103,7 +101,7 @@ allure serve allure-results
 
 ### Интеграция с Jira
 
-> <a target="_blank" href="https://jira.autotests.cloud/browse/HOMEWORK-1128">Ссылка на проект в Jira</a>
+> <a target="_blank" href="https://jira.autotests.cloud/browse/HOMEWORK-1160">Ссылка на проект в Jira</a>
 
 ![This is an image](design/image/jira_glazova.png)
 

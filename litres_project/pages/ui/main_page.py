@@ -43,7 +43,7 @@ class MainPage:
         return self
 
     def search_book_by_author(self, book):
-        with allure.step("Enter the author of the book in the search and click the Find button")
+        with allure.step("Enter the author of the book in the search and click the Find button"):
             browser.element('[data-testid="header__search-input--desktop"]').should(be.visible).type(book.author)
             browser.element('[data-testid="header__search-button--desktop"]').should(be.visible).click()
         return self

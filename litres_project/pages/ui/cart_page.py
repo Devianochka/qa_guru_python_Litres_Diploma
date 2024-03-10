@@ -16,7 +16,6 @@ class CartPage:
 
     def book_must_be_removed_from_cart(self):
         with allure.step("Checking that the book has been removed from cart"):
-        with allure.step("Checking that the book has been removed from cart"):
             browser.element('.EmptyState-module__empty__title_22qdT').should(have.text('Корзина пуста'))
         return self
 

@@ -10,8 +10,8 @@ class AndroidBookPage:
 
     def go_to_saved_tab(self):
         browser.element((AppiumBy.ID, "ru.litres.android.global:id/nav_my_audiobooks")).click()
-        browser.element((AppiumBy.ID, "ru.litres.android.global:id/textViewBookSectionTitle")).click()
         browser.element((AppiumBy.ACCESSIBILITY_ID, "SAVED")).click()
+        browser.element((AppiumBy.ID, "ru.litres.android.global:id/textViewBookSectionTitle")).click()
         return self
 
     def book_must_be_added_to_saved(self):

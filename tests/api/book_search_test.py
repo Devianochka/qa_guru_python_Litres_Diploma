@@ -42,10 +42,10 @@ def test_unsuccessful_searching_of_book_by_title():
 
     book_title = 'nbmcgfhmghm'
     types = 'text_book'
-    url = f"/search?q={book_title}&types={types}"
+    url = f"/search?{"q": book_title, "art_types": art_types, "types": types}"
     headers = {"Content-Type": "application/json"}
 
-    result = api_get(url, headers=headers)
+    result = api_get(url, headers=headers, params=params)
 
     assert result.status_code == 200
     jsonschema.validate(result.json(), schema)

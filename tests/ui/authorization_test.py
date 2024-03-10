@@ -13,7 +13,7 @@ from litres_project.pages.ui.main_page import main_page
 @allure.label('layer', 'ui')
 def test_authorization_registered_user():
     user = User(
-        name='Диана Сагаева',
+        name='d_sagaeva',
         email=os.getenv('USER_EMAIL'),
         password=os.getenv('USER_PASSWORD')
     )

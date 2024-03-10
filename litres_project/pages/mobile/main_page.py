@@ -12,8 +12,8 @@ class AndroidMainPage:
 
     def hiding_adult_content(self):
 
-        if browser.element((AppiumBy.ID, "ru.litres.android.global:id/btnDisableAdultContent")).click():
-            browser.element((AppiumBy.ID, "ru.litres.android.global:id/btnConfirmDisableAdultContent")).click()
+        if browser.element((AppiumBy.ID, "ru.litres.android:id/btnDisableAdultContent")).click():
+            browser.element((AppiumBy.ID, "ru.litres.android:id/btnConfirmDisableAdultContent")).click()
         return self
 
 

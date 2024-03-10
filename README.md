@@ -99,13 +99,13 @@ allure serve allure-results
 
 > <a target="_blank" href="https://jira.autotests.cloud/browse/HOMEWORK-1160">Ссылка на проект в Jira</a>
 
-![This is an image](design/image/jira_glazova.png)
+![This is an image](design/image/)
 
 ----
 
 ### Оповещение о результатах прогона тестов в Telegram
 
-![This is an image](design/image/tg_glazova.png)
+![This is an image](design/image/tg_sagaeva.png)
 
 ----
 

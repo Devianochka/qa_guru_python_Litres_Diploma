@@ -13,7 +13,7 @@ class BookPage:
             browser.driver.refresh()
         return self
 
-    def book_must_be_added_to_cart(self, book)
+    def book_must_be_added_to_cart(self, book):
         with allure.step("Checking that the book has been added to the cart"):
             browser.open("my-books/cart/")
             browser.element('[data-testid="cart__bookCardTitle--wrapper"]').should(have.text(book.name))

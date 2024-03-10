@@ -24,7 +24,7 @@ class MainPage:
         return self
 
     def user_must_not_be_authorized(self):
-        with allure.step("Checking that user has not been authorized")
+        with allure.step("Checking that user has not been authorized"):
             browser.element('.ControlInput-module__input__error_2jXOB').should(have.text('Неверное сочетание логина и '
                                                                                          'пароля'))
         return self

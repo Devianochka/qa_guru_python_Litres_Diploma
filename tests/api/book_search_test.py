@@ -18,12 +18,9 @@ def test_successful_searching_of_book_by_title():
     book_title = 'Стоя под радугой'
     art_types = 'text_book'
     types = 'text_book'
-    url = f"/search?{"q": book_title, "
-    art_types
-    ": art_types, "
-    types
-    ": types}"
+    url = f"/search?{"q": book_title, "art_types": art_types, "types": types}"
     headers = {"Content-Type": "application/json"}
+
 
     result = api_get(url, headers=headers, params=params)
 

@@ -9,16 +9,9 @@ from litres_project.pages.mobile.books_to_read_page import book_search_page
 @allure.severity('normal')
 @allure.label('layer', 'mobile')
 def test_successful_searching_book(android_mobile_management):
-    with allure.step('Selecting the application language'):
         main_page.selecting_application_language()
-
-    with allure.step('Hiding the adult content'):
         main_page.hiding_adult_content()
-
-    with allure.step('Type search'):
         book_search_page.searching_book()
-
-    with allure.step('Verify content found'):
         book_search_page.book_must_be_found()
 
 
@@ -28,14 +21,7 @@ def test_successful_searching_book(android_mobile_management):
 @allure.severity('normal')
 @allure.label('layer', 'mobile')
 def test_unsuccessful_searching_book(android_mobile_management):
-    with allure.step('Selecting the application language'):
         main_page.selecting_application_language()
-
-    with allure.step('Hiding the adult content'):
         main_page.hiding_adult_content()
-
-    with allure.step('Type search'):
         book_search_page.searching_non_existent_book()
-
-    with allure.step('Verify content not found'):
         book_search_page.book_must_not_be_found()

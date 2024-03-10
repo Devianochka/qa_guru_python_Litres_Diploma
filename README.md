@@ -79,10 +79,6 @@ allure serve allure-results
 
 ### Allure отчет
 
-#### Общие результаты
-
-![This is an image](design/image/allure_trend.png)
-
 #### Список тест кейсов
 
 ![This is an image](design/image/list_of_cases.png)
@@ -119,4 +115,4 @@ allure serve allure-results
 
 ### Пример видео прохождения mobile-автотеста
 
-![autotest_gif](design/image/mobile_at.gif)
+![autotest_gif](design/image/mobile.gif)

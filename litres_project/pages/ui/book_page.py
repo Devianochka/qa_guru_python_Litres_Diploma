@@ -1,5 +1,5 @@
 from selene import browser, be, have
-
+import allure
 
 class BookPage:
     def open(self, book):

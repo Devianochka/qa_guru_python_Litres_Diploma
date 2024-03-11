@@ -19,7 +19,7 @@ def test_authorization_registered_user():
     email = os.getenv('USER_EMAIL')
     password = os.getenv('USER_PASSWORD')
 
-    result = api_post(url, headers=headers, json={"login": user_email, "password": user_password})
+    result = api_post(url, headers=headers, json={"login": email, "password": password})
 
     assert result.status_code == 200
     jsonschema.validate(result.json(), schema)
@@ -39,7 +39,7 @@ def test_authorization_unregistered_user():
     email = os.getenv('USER_EMAIL')
     invalid_password = os.getenv('UNREGISTERED_USER_PASSWORD')
 
-    result = api_post(url, headers=headers, json={"login": user_email, "password": invalid_password})
+    result = api_post(url, headers=headers, json={"login": email, "password": invalid_password})
 
     assert result.status_code == 401
     jsonschema.validate(result.json(), schema)

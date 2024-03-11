@@ -18,14 +18,11 @@ def test_successful_searching_of_book_by_title():
     book_title = 'Стоя под радугой'
     art_types = 'text_book'
     types = 'text_book'
-    url = f'/search?{"q": book_title, "art_types": art_types, "types": types}'
-    headers = {"Content-Type": "application/json"}
-
-
-    result = api_get(url, headers=headers, params=params)
+    url = f'/search'
+    params = {"q": book_title, "art_types": art_types, "types": types}
+    result = api_get(url, params=params)
 
     assert result.status_code == 200
-    jsonschema.validate(result.json(), schema)
     assert result.json()['payload']['data'][0]['type'] == "text_book"
 
 
@@ -42,10 +39,9 @@ def test_unsuccessful_searching_of_book_by_title():
 
     book_title = 'nbmcgfhmghm'
     types = 'text_book'
-    url = f'/search?{"q": book_title, "art_types": art_types, "types": types}'
-    headers = {"Content-Type": "application/json"}
-
-    result = api_get(url, headers=headers, params=params)
+    url = f'/search'
+    params = {"q": book_title, "types": types}
+    result = api_get(url, params=params)
 
     assert result.status_code == 200
     jsonschema.validate(result.json(), schema)

@@ -16,7 +16,7 @@ def test_authorization_registered_user():
     schema = load_schema('authorization.json')
     url = "/auth/login"
 
-    result = api_post(url, headers=headers, json={"login": email, "password": password})
+    result = api_post(url, json={"login": email, "password": password})
 
     assert result.status_code == 200
     jsonschema.validate(result.json(), schema)
@@ -35,7 +35,7 @@ def test_authorization_unregistered_user():
     url = "/auth/login"
 
 
-    result = api_post(url, headers=headers, json={"login": email, "password": invalid_password})
+    result = api_post(url, json={"login": email, "password": invalid_password})
 
     assert result.status_code == 401
     jsonschema.validate(result.json(), schema)

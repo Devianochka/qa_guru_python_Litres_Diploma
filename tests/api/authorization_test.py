@@ -1,5 +1,6 @@
 import allure
 import jsonschema
+
 from litres_project.schema.load_schema import load_schema
 from litres_project.utils.api_requests import api_post
 from tests.api.conftest import url, user_email, user_password, invalid_password, headers
@@ -14,6 +15,7 @@ from tests.api.conftest import url, user_email, user_password, invalid_password,
 @allure.severity('normal')
 def test_authorization_registered_user():
     schema = load_schema('authorization.json')
+    url = "/auth/login"
 
     result = api_post(url, headers=headers, json={"login": user_email, "password": user_password})
 
@@ -31,6 +33,7 @@ def test_authorization_registered_user():
 @allure.severity('normal')
 def test_authorization_unregistered_user():
     schema = load_schema('failed_authorization.json')
+    url = "/auth/login"
 
     result = api_post(url, headers=headers, json={"login": user_email, "password": invalid_password})
 

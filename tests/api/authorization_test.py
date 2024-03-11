@@ -2,7 +2,7 @@ import allure
 import jsonschema
 from litres_project.schema.load_schema import load_schema
 from litres_project.utils.api_requests import api_post
-from tests.api.conftest import email, password, invalid_password, headers
+from tests.api.conftest import email, password, invalid_password
 
 
 @allure.epic('API. Authorized')
